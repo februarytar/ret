@@ -1,5 +1,35 @@
-<h1>New User</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h3 class="text-center">Lets's join the journey!</h3>
 
-<%= render 'form', user: @user %>
+        <%= bootstrap_form_for users_path do |form| %>
+  
+          <%= form.text_field  :name,
+                                placeholder: 'Name',
+                                class: 'form-control' %>
 
+          <%= form.text_field  :alamat,
+                                placeholder: 'address',
+                                class: 'form-control' %>
+
+          <%= form.email_field  :email,
+                                class: 'form-control',
+                                placeholder: 'email' %>
+
+          <%= form.password_field   :password,
+                                    class: 'form-control',
+                                    placeholder: 'password' %>
+
+          <%= form.password_field   :password_confirmation,
+                                    class: 'form-control',
+                                    placeholder: 'password' %>
+
+          <%= form.submit "Join Journey!", class: 'btn form-control sign-up-button' %>
+
+        <% end %>
+
+    </div>
+  </div> 
+</div>
 <%= link_to 'Back', users_path %>
