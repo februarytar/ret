@@ -10,7 +10,7 @@ class RegistrationsController < ApplicationController
                                     :password_confirmation)
     end
   
-    def account_update_params
+    def edit_user
       params.require(:user).permit( :name,
                                     :alamat 
                                     :email, 
