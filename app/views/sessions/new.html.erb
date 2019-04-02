@@ -1,19 +1,27 @@
 <p id="alert"><%= alert %></p>
-<h3>You have to login before start the Journey!</h3>
 
-<%= bootstrap_form_for sessions_path do |form| %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h3 class="text-center">You have to login before start the journey!</h3>
+
+        <%= bootstrap_form_for sessions_path do |form| %>
   
-  <%= form.email_field  :email,
-                        autofocus: 'form-control',
-                        placeholder: 'email' %>
+          <%= form.email_field  :email,
+                                autofocus: 'form-control',
+                                placeholder: 'email' %>
 
-  <%= form.password_field   :password,
-                            autocomplete: "off",
-                            class: 'form-control',
-                            placeholder: 'password' %>
+          <%= form.password_field   :password,
+                                    autocomplete: "off",
+                                    class: 'form-control',
+                                    placeholder: 'password' %>
 
-  <%= form.check_box :remember_me %>
+          <%= form.check_box :remember_me %>
 
-  <%= form.submit "Log In", class: 'form-control login-button' %>
+          <%= form.submit "Start Journey!", class: 'form-control login-button' %>
 
-<% end %>
+        <% end %>
+
+    </div>
+  </div> 
+</div>
