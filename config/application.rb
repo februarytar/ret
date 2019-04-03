@@ -2,6 +2,8 @@ require_relative 'boot'
 
 require 'rails/all'
 
+config.action_controller.include_all_helpers = false
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
